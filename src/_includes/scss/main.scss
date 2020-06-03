@@ -218,3 +218,10 @@ progress[value] {
     grid-template-columns: repeat(2, 1fr);
     grid-column-gap: 50px;
 }
+
+@media (max-width: 620px) {
+    .skill-container {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+}
