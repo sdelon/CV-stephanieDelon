@@ -1,16 +1,38 @@
 {
     "items": [
         {
-            "title": "Cat Wrangler",
-            "company": "Latest Company",
-            "dates": "2018-Present",
-            "description": "Doing nice and wonderful things."
+            "title": "Gérante",
+            "company": "APS Editions",
+            "dates": "2014 - aujourd'hui",
+            "description": [
+                "- Publication de Jeanne, un magazine numérique mensuel dédié à la communauté LGBT",
+                "- Elaboration du chemin de fer et du choix des sujets",
+                "- Gestion de l'équipe de journalistes / chroniqueuses",
+                "- Création graphique et maquettage du magazine",
+                "- Conception et développement du kiosque : la plateforme de lecture du magazine"
+            ]
         },
         {
-            "title": "Junior Cat Wrangler",
-            "company": "Previous Company",
-            "dates": "2016-Present",
-            "description": "Doing things that helped me grow and become as clever as I am today."
+            "title": "Responsable publicité, partenariat et communication",
+            "company": "Editions Lydiennes",
+            "dates": "2009 - 2013",
+            "description": [
+                "- Elaboration des stratégies de campagnes publicitaires",
+                "- Négociation des budgets avec les annonceurs",
+                "- Communication du support auprès des médias et attachés de presse",
+                "- Développement de l'image du magazine sur les réseaux sociaux"    
+            ]
+        },
+        {
+            "title": "Assistante marketing",
+            "company": "Domoti (Temps L et Confort et Vie)",
+            "dates": "2003 - 2009",
+            "description": [
+                "- Aide au lancement et développement de la marque à l'international",
+                "- Mise en place du plan marketing à l'export",
+                "- Responsable de l'apprentissage aux équipes internationales de l'utilisation de la plateforme de prises de commandes",
+                "- Recherche et mise en place de la stratégie de CRM"    
+            ]
         }
     ]
 }

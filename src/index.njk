@@ -1,64 +1,96 @@
 ---
 layout: layouts/base.njk
-name: "[YOUR NAME HERE]"
-title: "[YOUR NAME HERE]’s Résumé"
-subtitle: "[Underwater Basket Weaving and Podcasting]"
-description: "[YOUR NAME HERE] is [DOING IMPRESSIVE AND WONDERFUL THINGS]."
-summary: I'm the best there is at what I do.
+name: "Stéphanie Delon"
+title: "CV Stéphanie Delon"
+subtitle: "développeuse front-end & graphiste"
+summary: Volontaire et déterminée, autonome et passionnée.
 ---
 
-<header>
-    <h1>{{ name }}</h1>
-    <h2>{{ subtitle }}</h2>
-</header>
+<div class="left-container">
+    <header>
+        <h1 class="name">{{ name }} (39 ans)</h1>
+        <h2 class="subtitle">{{ subtitle }}</h2>
+    </header>
 
-<main>
-    <section class="contact">
-        <header class="small"><h1>Contact</h1></header>
-        <address>[YOUR CITY]</address>
+   
+        <section class="contact">
+            <header class="small"><h1>Coordonnées.</h1></header>
+            <address>1 Interridi - 29770 Goulien (Finistère)</address>
 
-        <ul>
-            {% for item in contact.items %}
-            <li><a href="{{ item.link }}">{{ item.name }}</a></li>
-            {% endfor %}
-        </ul>
-    </section>
+            <ul>
+                {% for item in contact.items %}
+                <li><a href="{{ item.link }}" target="_blank">{{ item.name }}</a></li>
+                {% endfor %}
+            </ul>
+        </section>
 
-    <section class="summary">
-        <header class="small"><h1>Summary</h1></header>
-        <p>{{ summary }}</p>
-    </section>
+        <section class="summary">
+            <header class="small"><h1>En bref.</h1></header>
+            <p><span class="summary">{{ summary }}</span> {{ metadata.about }}</p>
+        </section>
+        <nav>
+            <li><a href="#expe-pro">// Expériences professionnelles</a></li>
+            <li><a href="#formation">// Formations</a></li>
+            <li><a href="#competences">// Compétences</a></li>
+        </nav>
+</div>
 
-    <section class="experience">
-        <header><h1>Experience</h1></header>
+<div class="right-container">
+    <main>
+        <section class="experience">
+            <header><h1 id="expe-pro">Expériences professionnelles</h1></header>
 
-        <dl>
-            {% for item in experience.items %}
-            <dt>
-                <span>{{ item.title }}{% if item.company %}; {{ item.company }}{% endif %}</span>
-                <small>{{ item.dates }}</small>
-            </dt>
-            <dd>{{ item.description }}</dd>
-            {% endfor %}
-        </dl>
-    </section>
+            <dl>
+                {% for item in experience.items %}
+                <dt>
+                    <span class="title">{{ item.title }}{% if item.company %} - <span class="company">{{ item.company }}</span>{% endif %}</span>
+                    <small>{{ item.dates }}</small>
+                </dt>
+                    {% for descriptif in item.description %}
+                    <dd class="descriptif">{{ descriptif }}</dd>
+                    {% endfor %}
+                {% endfor %}
+            </dl>
+        </section>
 
-    <section class="education">
-        <header><h1>Education</h1></header>
-        <dl>
-            {% for item in education.items %}
-            <dt>{{ item.name }}</dt>
-            <dd>{{ item.description }}</dd>
-            {% endfor %}
-        </dl>
-    </section>
+        <section class="education">
+            <header><h1 id="formation">Formations</h1></header>
+            <dl>
+                {% for item in education.items %}
+                <dt>{{ item.name }}</dt>
+                    {% if ( item.description | isArr ) %}
+                        {% for descriptif in item.description %}
+                            <dd class="descriptif">{{ descriptif }}</dd>
+                        {% endfor %}
+                    {% else %}
+                            <dd class="descriptif">{{ item.description }}</dd>
+                    {% endif %}
+                {% endfor %}
+            </dl>
+        </section>
 
-    <section class="skills">
-        <header><h1>Skills</h1></header>
-        <ul>
-            {% for item in skills.items %}
-            <li>{{ item.name }}</li>
-            {% endfor %}
-        </ul>
-    </section>
-</main>
+        <section class="skills">
+            <header><h1 id="competences">Compétences</h1></header>
+            <div class="skill-container">
+                <ul class="field-competence">
+                    <h3>Développement</h3>
+                        <div><li class="label-competence" for="skill">HTML<progress id="skill" max="100" value="80"> 80% </progress></li></div>
+                        <div><li class="label-competence" for="skill">CSS<progress id="skill" max="100" value="80"> 80% </progress></li></div>
+                        <div><li class="label-competence" for="skill">Javascript<progress id="skill" max="100" value="60"> 60% </progress></li></div>
+                        <div><li class="label-competence" for="skill">PHP<progress id="skill" max="100" value="45"> 45% </progress></li></div>
+                </ul>
+                <ul class="field-competence">
+                    <h3>Graphisme</h3>
+                        <div><li class="label-competence" for="skill">Adobe Photoshop / Affinity Designer<progress id="skill" max="100" value="80"> 80% </progress></li></div>
+                        <div><li class="label-competence" for="skill">Adobe InDesign / Affinity Publisher<progress id="skill" max="100" value="80"> 80% </progress></li></div>
+                        <div><li class="label-competence" for="skill">Adobe Illustrator / Affinity Designer<progress id="skill" max="100" value="60"> 60% </progress></li></div>
+                </ul>
+                <ul class="field-competence">
+                    <h3>Langues</h3>
+                        <li>Anglais: lu, écrit, parlé</li>
+                        <li>Allemand: lu, écrit</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+</div>

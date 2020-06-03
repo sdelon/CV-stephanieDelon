@@ -1,8 +1,20 @@
 {
     "items": [
         {
-            "name": "Your School",
-            "description": "Bachelor of Arts in Basket Weaving, Summa Cum Laude, 2019"
+            "name": "2018 - présent : Apprentissage du code en autodidacte",
+            "description": [
+                "- Utilisation des plateformes Udemy et OpenClassRoom pour l'apprentissage du HTML et du CSS et des bases de Javascript",
+                "- 'Beginner Javascript' par Wes Bos pour un apprentissage plus profond de Javascript",
+                "- Création et développement de plusieurs thèmes Wordpress qui m'ont apportés les bases du langage PHP / MySQL"
+            ]
+        },
+        {
+            "name": "09/1999 - 05/2003 : Université Catholique de Lille",
+            "description": "Maîtrise LEA (Langues Etrangères Appliquées)"
+        },
+        {
+            "name": "1999 : Lycée de Nogent sur Marne",
+            "description": "Baccalauréat littéraire"
         }
     ]
 }
